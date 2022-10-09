@@ -2,38 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="body">
+    <div class="normal-nav">
+        <nav class="nav">
+            <img class="logo" src="images/logo.svg">
+            <div class="links">
+                <button class="features">
+                    Features<img class="arrow-down" src="images/icon-arrow-down.svg">
+                    <div class="options features-options">
+                        <a href="#"><img src="images/icon-todo.svg"><p>Todo list</p></a>
+                        <a href="#"><img src="images/icon-calendar.svg"><p>Calendar</p></a>
+                        <a href="#"><img src="images/icon-reminders.svg"><p>Reminders</p></a>
+                        <a href="#"><img src="images/icon-planning.svg"><p>Planning</p></a>
+                    </div>
+                </button>
+                <button class="company">
+                    Company<img class="arrow-down" src="images/icon-arrow-down.svg">
+                    <div class="options company-options">
+                        <a href="#">History</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </button>
+                <a class="careers"href="#">Careers</a>
+                <a class="about"href="#">About</a>
+            </div>
+        </nav>
+        <div class="log-buttons">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+        </div>
+    </div>
+    <div class="responsive-nav">
+        <img class="logo" src="images/logo.svg">
+        <button id="responsive-menu-button" style="border: none; background: transparent;"><img src="images/icon-menu.svg"></button>
+        <div class="responsive-menu">
+            <div class="menu">
+                <button id="close"><img src="images/icon-close-menu.svg"></button>
+                <div class="links">
+                <button class="features features-responsive-button">
+                    Features<img class="arrow-down" src="images/icon-arrow-down.svg">
+                </button>
+                <div class="options features-options features-responsive">
+                        <a href="#"><img src="images/icon-todo.svg"><p>Todo list</p></a>
+                        <a href="#"><img src="images/icon-calendar.svg"><p>Calendar</p></a>
+                        <a href="#"><img src="images/icon-reminders.svg"><p>Reminders</p></a>
+                        <a href="#"><img src="images/icon-planning.svg"><p>Planning</p></a>
+                    </div>
+                <button class="company company-responsive-button">
+                    Company<img class="arrow-down" src="images/icon-arrow-down.svg">
+                    
+                </button>
+                <div class="options company-options company-responsive">
+                        <a href="#">History</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Blog</a>
+                    </div>
+                <a class="careers"href="#">Careers</a>
+                <a class="about"href="#">About</a>
+            </div>
+            <div class="log-buttons">
+                <button class="login">Login</button>
+                <button class="register">Register</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="section section-1">
+            <div class="article">
+                <h1>Make remote work</h1>
+                <p>Get your team in sync, no matter your location. Streamline processes, 
+                create team rituals, and watch productivity soar.</p>
+                <button>Learn more</button>
+            </div>
+            <div class="clients">
+                <img src="images/client-databiz.svg">
+                <img src="images/client-audiophile.svg">
+                <img src="images/client-meet.svg">
+                <img src="images/client-maker.svg">
+            </div>
+        </div>
+        <div class="section section-2">
+            <img class="desktop" src="images/image-hero-desktop.png">
+            <img class="mobile" src="images/image-hero-mobile.png">
+        </div>
+    </div>
+<script type="text/javascript" src="code.js"></script>
 </body>
 </html>

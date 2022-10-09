@@ -1,0 +1,340 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+body {
+	max-width: 1600px;
+	margin: 0 auto;
+	background: hsl(0, 0%, 98%);
+}
+
+.normal-nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 3.5%;
+}
+
+.responsive-nav {
+	display: none;
+}
+
+.nav {
+	display: flex;
+}
+
+.logo {
+	margin-right: 10%;
+	object-fit: contain;
+}
+
+.links {
+	display: flex;
+}
+
+.careers, .about, .features, .company {
+	margin: 0 15px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: hsl(0, 0%, 41%);
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.careers:hover, .about:hover, .nav div button:hover  {
+	color:  hsl(0, 0%, 8%);
+}
+
+
+.arrow-down {
+	object-fit: contain;
+	margin: 0 4px;
+}
+
+.company, .features {
+	position: relative;
+}
+
+.options {
+	position: absolute;
+	flex-direction: column;
+	background : #fff;
+	padding: 15px;
+	border-radius: 6px;
+	box-shadow: 0 0 100px #ccc;
+	top: 0;
+	transform: translateY(45px);
+}
+
+.features-options {
+	right: 0;
+	display: none;
+}
+
+.company-options {
+	left: 0;
+	display: none;
+}
+
+
+.options a {
+	margin: 10px 0;
+	display: flex;
+	text-decoration: none;
+	color: #000;
+	white-space: nowrap;
+	color: hsl(0, 0%, 41%);
+}
+
+.options a:hover {
+	color: hsl(0, 0%, 8%);
+}
+
+.options a img {
+	margin-right: 10px;
+}
+
+.log-buttons {
+	display: flex;
+}
+
+.login, .article button {
+	padding: 13px 20px;
+	margin: 0 8px;
+	border: none;
+	background: transparent;
+	color: hsl(0, 0%, 41%);
+}
+
+.log-buttons button:hover {
+	color: hsl(0 , 0% ,8%);
+}
+
+.register, .article button {
+	border-radius: 10px;
+	border: 2px solid hsl(0, 0%, 41%);
+}
+.register {
+	border: 2px solid hsl(0, 0%, 41%);
+	color: hsl(0, 0%, 41%);
+	padding: 13px 20px;
+	margin: 0 8px;
+	background: transparent;
+}
+
+.register:hover  {
+	color: hsl(0 , 0% ,8%);
+	border: 2px solid hsl(0 , 0% ,8%);
+}
+
+.main {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.section {
+	width: 50%;
+	padding: 4% 8%;
+}
+
+.section-1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.section-2 {
+	display: flex;
+	align-items: center;
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-grow: 1;
+	margin: 20px auto;
+}
+
+.article h1 {
+	font-size: 76px;
+	color: hsl(0, 0%, 8%);
+}
+
+.article p {
+	font-size: 18px;
+	color: hsl(0, 0%, 41%);
+}
+
+.article button {
+	width: fit-content;
+	margin: 15px 0;
+	background: hsl(0, 0%, 8%);
+	color: #fff;
+	border: 2px solid #fff;
+	transition: all 0.3s;
+}
+
+.article button:hover {
+	background: #fff;
+	border: 2px solid #000;
+	color: #000;
+}
+
+.desktop {
+	width: 100%;
+}
+
+.mobile {
+	display: none;
+}
+
+.clients {
+	display: flex;
+	justify-content: space-between;
+}
+
+.clients img {
+	width: 20%;
+	object-fit: contain;
+}
+
+
+@keyframes grow {
+	0%{
+		height: 0;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+
+	.normal-nav {
+		display: none;
+	}
+
+	.responsive-nav {
+		display: flex;
+		justify-content: space-between;
+		padding: 6%;
+		position: relative;
+	}
+
+	.main {
+		flex-wrap: wrap-reverse;
+	}
+
+	.article h1 {
+		font-size: 34px;
+		text-align: center;
+		margin: 10px auto;
+	}
+	.article p {
+		text-align: center;
+		margin: 10px auto;
+	}
+	.article button {
+		text-align: center;
+		margin: 10px auto;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.section {
+		width: 100%;
+	}
+
+	.mobile {
+		display: inherit;
+		width: 100%;
+	}
+
+	.responsive-menu {
+		position: absolute;
+		background: rgba(0,0,0,0.6);
+		height: fit-content;
+		min-height: 140vh;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+
+	.menu {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 70%;
+		max-width: 250px;
+		min-height: 100%;
+		background: #fff;
+		padding: 20px;
+		padding-top: 60px;
+	}
+
+	.links {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	#close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: transparent;
+		border: none;
+		padding: 5px;
+	}
+
+	.features, .company {
+		margin: 10px 0;
+		width: fit-content;
+	}
+
+	.features:hover, .company:hover{
+		color: #000;
+	}
+
+	.careers, .about {
+		margin: 0;
+		padding: 10px 0;
+		width: fit-content;
+	}
+
+	.log-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.log-buttons button {
+		width: 100%;
+	}
+
+	.options {
+		display: flex;
+		position: relative;
+		transform: translateY(0);
+		box-shadow: none;
+		height: 0;
+		display: none;
+	}
+
+	.options a {
+		margin: 10px 0;
+	}
+
+	.features-options {
+		right: auto;
+		left: 0;
+	}
+}
