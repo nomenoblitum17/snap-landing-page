@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: 'Epilogue', sans-serif;;
 }
 
 body {
@@ -168,6 +168,7 @@ body {
 
 .article p {
 	font-size: 18px;
+	line-height: 1.6;
 	color: hsl(0, 0%, 41%);
 }
 
